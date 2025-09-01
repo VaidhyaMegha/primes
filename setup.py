@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="primes",
-    version="0.1.0",
+    name="number-theory-primes",
+    version="0.1.2",
     author="Madhulatha Mandarapu, Sandeep Kunkunuru",
     author_email="madhulatha@vaidhyamegha.com, sandeep.kunkunuru@gmail.com",
     description="Advanced primality testing algorithms including AKS",
