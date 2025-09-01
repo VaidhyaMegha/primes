@@ -7,7 +7,7 @@ setup(
     name="primes",
     version="0.1.0",
     author="Madhulatha Mandarapu, Sandeep Kunkunuru",
-    author_email="",
+    author_email="madhulatha@vaidhyamegha.com, sandeep.kunkunuru@gmail.com",
     description="Advanced primality testing algorithms including AKS",
     long_description=long_description,
     long_description_content_type="text/markdown",
