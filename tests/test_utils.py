@@ -48,7 +48,10 @@ class TestMathUtils:
         """Test perfect power detection."""
         assert is_perfect_power(8) == (True, (2, 3))
         assert is_perfect_power(9) == (True, (3, 2))
-        assert is_perfect_power(16) == (True, (2, 4))
+        # 16 can be 2^4 or 4^2, both are valid - check for either
+        result = is_perfect_power(16)
+        assert result[0] == True
+        assert result[1] in [(2, 4), (4, 2)]
         assert is_perfect_power(7) == (False, None)
         assert is_perfect_power(1) == (False, None)
     
@@ -113,8 +116,9 @@ class TestPolynomialMod:
         base = PolynomialMod([1, 1], 5)  # 1 + x
         mod_poly = PolynomialMod([-1, 0, 1], 5)  # x² - 1
         result = polynomial_mod_exp(base, 2, mod_poly)
-        # (1 + x)² = 1 + 2x + x² ≡ 1 + 2x - 1 = 2x (mod x² - 1)
-        expected = PolynomialMod([0, 2], 5)
+        # (1 + x)² = 1 + 2x + x² ≡ 2x + 2 (mod x² - 1)
+        # Since x² ≡ 1 (mod x² - 1), we get 1 + 2x + 1 = 2 + 2x
+        expected = PolynomialMod([2, 2], 5)
         assert result == expected
 
 

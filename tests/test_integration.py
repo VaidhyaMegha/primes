@@ -86,7 +86,8 @@ def test_comprehensive_verification():
         print(f"{c:2d}: {status} ({'PRIME' if result else 'COMPOSITE'})")
     
     print(f"\nOverall result: {'✓ ALL CORRECT' if all_correct else '✗ SOME ERRORS'}")
-    return all_correct
+    # Don't return anything to avoid pytest warning
+    assert all_correct, "Some tests failed"
 
 
 def test_detailed_17():
