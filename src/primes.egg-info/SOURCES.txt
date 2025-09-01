@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/primes/__init__.py
+src/primes.egg-info/PKG-INFO
+src/primes.egg-info/SOURCES.txt
+src/primes.egg-info/dependency_links.txt
+src/primes.egg-info/requires.txt
+src/primes.egg-info/top_level.txt
+src/primes/aks/__init__.py
+src/primes/aks/core.py
+src/primes/utils/__init__.py
+src/primes/utils/math_utils.py
+src/primes/utils/polynomial.py
+tests/test_aks.py
+tests/test_utils.py
